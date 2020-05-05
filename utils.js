@@ -5,9 +5,5 @@ export const initializePoints = (array) => {
 }
 
 export const isCollinear = (p1, p2, p3) => {
-  if((p3.y - p2.y) * (p2.x - p1.x) == (p2.y - p1.y) * (p3.x - p2.x)) {
-    return true;
-  } else {
-    return false;
-  }
+  return (p3.y - p2.y) * (p2.x - p1.x) === (p2.y - p1.y) * (p3.x - p2.x);
 }
